@@ -1,0 +1,648 @@
+{
+  "gameSystem": {
+    "name": "Maelstrom's Edge",
+    "id": "49cd-4f53-908d-4074",
+    "authorContact": "medgebattlescribe@gmail.com",
+    "authorName": "Marten",
+    "authorUrl": "www.maelstromsedge.com",
+    "battleScribeVersion": 2.03,
+    "revision": 8,
+    "type": "gameSystem",
+    "xmlns": "http://www.battlescribe.net/schema/gameSystemSchema",
+    "categoryEntries": [
+      {"name": "Command", "id": "ceb9-cdff-5047-ce6c", "hidden": false},
+      {"name": "Core", "id": "6b1e-e5f2-496a-ea94", "hidden": false},
+      {"name": "Hammer", "id": "2cba-258f-2d61-acac", "hidden": false},
+      {"name": "Vanguard", "id": "92db-6165-172b-1666", "hidden": false},
+      {"name": "Anvil", "id": "c70f-ac61-5a64-4551", "hidden": false},
+      {"name": "Rules Summary", "id": "5a96-4a1b-45a4-1080", "hidden": false},
+      {"name": "Faction Objective", "id": "4507-76c2-563b-778a", "hidden": false}
+    ],
+    "costTypes": [{"name": "pts", "id": "db16-c87d-323d-038b", "defaultCostLimit": 0, "hidden": false}],
+    "forceEntries": [
+      {
+        "name": "Rules Summary",
+        "id": "34eb-12e4-a197-14f0",
+        "hidden": false,
+        "categoryLinks": [
+          {
+            "name": "Rules Summary",
+            "id": "34eb-12e4-a197-14f0-5a96-4a1b-45a4-1080",
+            "hidden": false,
+            "primary": false,
+            "targetId": "5a96-4a1b-45a4-1080",
+            "constraints": [
+              {
+                "id": "9a95-fb57-9f8a-1865",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 1
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "profileTypes": [
+      {
+        "name": "Model profile",
+        "id": "051a-8687-d9dc-f6f6",
+        "characteristicTypes": [
+          {"name": "MV", "id": "8f34-88f2-7438-3ce1"},
+          {"name": "EVS", "id": "7dda-8964-bbea-4c5d"},
+          {"name": "SKL", "id": "22e9-4178-2115-c4ff"},
+          {"name": "AV", "id": "092f-8cfc-c198-baa3"},
+          {"name": "MAS", "id": "2fb8-2427-e085-37e3"},
+          {"name": "FOR", "id": "0099-0e19-9d1a-09eb"},
+          {"name": "WP", "id": "ed7f-36de-52b3-4a3d"},
+          {"name": "Model type", "id": "db37-3912-9d9a-4f5b"}
+        ]
+      },
+      {
+        "name": "Weapon profile",
+        "id": "0063-d0e3-f342-8e26",
+        "characteristicTypes": [
+          {"name": "RNG", "id": "9323-301d-a90c-af97"},
+          {"name": "SHO", "id": "59c9-9867-29e6-7329"},
+          {"name": "PEN", "id": "b406-fcb3-9a90-7a93"},
+          {"name": "DAM", "id": "08af-ad31-cd22-7902"},
+          {"name": "Special", "id": "402e-2407-d00a-73c1"}
+        ]
+      },
+      {
+        "name": "Additional Units",
+        "id": "ad49-3824-6f60-a70d",
+        "characteristicTypes": [
+          {"name": "Command", "id": "c76e-aa66-07f5-b32c"},
+          {"name": "Core", "id": "9079-9375-3bba-fe83"},
+          {"name": "Hammer", "id": "a174-8465-d170-31df"},
+          {"name": "Vanguard", "id": "e3f8-e48b-4bd7-c762"},
+          {"name": "Anvil", "id": "9864-9b45-5352-52a6"}
+        ]
+      }
+    ],
+    "publications": [{"name": "Rulebook", "id": "49cd-4f53-pubd1e201"}],
+    "sharedRules": [
+      {
+        "name": "Character (designator)",
+        "id": "c265-6b4f-174a-3a45",
+        "description": "Characters can use the Join Unit free action if they’ve not yet been activated: Join a unit within 3” when it is activated, before its discipline check; move the character within 3” of as many models in the unit as possible, facing the same direction (fixed move). Only keep the highest number of STs, and then add any STs gained by the character’s move. A character may not join other characters or model with the Solo designator. Leave a unit by making an activation check for the unit: if it’s successful, the character counts as having been activated alone and acts independently of the unit. The unit can activate later.",
+        "hidden": false,
+        "page": 66,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Hover (designator)",
+        "id": "fdf8-dbba-f182-363f",
+        "description": "Model can move dynamically. This is special movement with these rules:\n·         may utilize open ground bonus movement when taking cover;\n·         may pass through intervening models and terrain;\n·         can move onto and off of vertical terrain without counting any vertical distance;\n·         If any model ends a dynamic move touching an obstacle or even partially within area terrain, the unit gains an additional D3 STs upon completing the move.",
+        "hidden": false,
+        "page": 68,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Mobile (designator)",
+        "id": "fc4f-53e5-d9b2-2b4a",
+        "description": "If a unit is comprised entirely of mobile models it is a mobile unit and therefore:\n·         may never choose a Hold & Fire action;\n·         has the Dodge (1) ability;\n·         does not fire wild in a Dash action, unless they are on the move or making a hit & run.",
+        "hidden": false,
+        "page": 68,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Human (designator)",
+        "id": "af04-09e5-59bc-5614",
+        "description": "Humans are organic models. Human behemoths do not explode.",
+        "hidden": false,
+        "page": 68,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Robot (designator)",
+        "id": "f6f8-d5e8-dba6-6d43",
+        "description": "Robots are inorganic models. Robot units can only be joined and ordered by Bot Handlers.",
+        "hidden": false,
+        "page": 68,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Solo (designator)",
+        "id": "4eec-1b95-aaeb-a161",
+        "description": "May not be joined by characters, cannot join other units.",
+        "hidden": false,
+        "page": 68,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Behemoth (model type)",
+        "id": "9c51-9b1d-f758-b494",
+        "description": "Behemoths have the following abilities:\n·         Overrun (exclusive): Can move through (overrun) standard-sized enemy units. Enemy units can fire defensively at a unit that overruns them at their choice of AV.\n·         Fearless (squad): The unit ignores psych STs, is never shell-shocked, pinned, or required to retreat or flee the battle. It does not take suppressive fire discipline checks or CQ discipline checks. When performing a Shaken action, the unit must either make a single move or remain stationary and fire a single round of wild shooting. Upon completing a Dig-in or Shaken action, shake-off the extra D3 STs as though it were pinned. Does not apply if squad leader is not fearless.\n·         Heavy Gunner: Ignore the Heavy ability, except when CQ fighting.\n·         Kill Mission: This unit cannot control mission objective markers, but can still contest them.\n·         Massive Strength: If a model’s primary CQ weapon is a melee weapon: add +1 DAM, and its PEN value is double the model’s MAS. Ignore the Heavy ability during CQ fighting.\n\nAs large models, they follow these rules:\n·         Directional movement: Non-fixed and non-dynamic movement can only be forward or reverse. A number of pivots up to 90° is allowed, limited to half the model’s EVS. Moving in reverse, MV is halved and only 1 pivot is allowed. End-of-move pivot for required facing is always allowed.\n·         Large models and terrain:\n\to    Large models are never in cover;\n\to    Standard-sized models never count as partially obscuring a large model;\n\to    Terrain features only partially obscure a large model if they obscure at least 50% of its body;\n\to    Large models only count as being partially obscured for being within an area terrain feature if their entire base is within it and it’s not low area terrain.\n·         Large model shooting: Large models can fire a number of weapons up to their FOR characteristic (see p. 65 for multiple weapons in CQ).\n·         Explode: When a large model becomes a casualty, it explodes on a 5+. This causes a special attack emanating from the base of the model using the model’s MAS vs. the targets’ EVS. Explosion profile: RNG=1/2MAS+D3\" SHO=MASx2 PEN=MAS DAM=1.",
+        "hidden": false,
+        "page": "69-73",
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Linked weapons",
+        "id": "6fc0-40e7-20d7-b5fe",
+        "description": "Linked weapons are 1 weapon system. Firing this counts as 1 weapon. Use one of the linked weapons to fire, each additional linked weapon adds +1SHO to that weapon.",
+        "hidden": false,
+        "page": 74,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Area of Effect (AoE)",
+        "id": "aa96-002a-ee00-6260",
+        "description": "SB (small blast), LB (large blast) or SPR (spray) template. # of models under template is the # of bonus shots the weapon fires, but cannot cover friendly models. LB & SB must have their hole entirely over the base of a model in the primary target, unless an Ind Fire attack. SPR has the Short Ranged & Ignore Cover abilities, must touch the firing model’s base, and be entirely within its front arc.",
+        "hidden": false,
+        "page": 75,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Beam",
+        "id": "278e-6fa8-bd6d-ef2c",
+        "description": "If damage is caused on a model beyond what is required to remove it as a casualty, immediately inflict an additional DAM1 penetration on that unit.",
+        "hidden": false,
+        "page": 76,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Burst (X+)",
+        "id": "7c63-b24c-68cb-7332",
+        "description": "When (X+) is rolled to successfully hit, 2 hits are inflicted instead of 1. Has no effect on wild fire.",
+        "hidden": false,
+        "page": 76,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "CQ Explosive",
+        "id": "f990-85c2-a9af-1875",
+        "description": "Can only be used during CQ fighting. A CQ explosive primary CQ weapon cannot benefit from a secondary CQ weapon, nor may a CQ explosive be utilized as a secondary CQ weapon.",
+        "hidden": false,
+        "page": 76,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Drag Unit (X\")",
+        "id": "ae9b-99b3-e876-69fa",
+        "description": "For each successful hit, all non-large models in the unit may be moved up to (X) inches by the firing player, ending closer to the firing unit than they started and facing the firing unit. Has no effect at long range, nor on units unable to make a fixed move.",
+        "hidden": false,
+        "page": 76,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "EMP (X+)",
+        "id": "dc11-7141-9697-0e7c",
+        "description": "Cannot be ignored by a Field. When (X+) is rolled to successfully penetrate, it gains +1 DAM against inorganic models.",
+        "hidden": false,
+        "page": 76,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Explosive (X+)",
+        "id": "03c4-87e7-8465-02a1",
+        "description": "When (X+) is rolled to successfully penetrate, the attack gains +1 DAM.",
+        "hidden": false,
+        "page": 76,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "F-PEN (X+)",
+        "id": "cb5a-a963-103a-5a08",
+        "description": "(X+) is the minimum result needed to successfully roll to penetrate, regardless of the defender's AV.",
+        "hidden": false,
+        "page": 77,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Grenade",
+        "id": "6fbf-ebdb-f721-eb92",
+        "description": "Has the Short Ranged ability (add (X) shots at short range. If no value is listed, double the shots fired. Automatically misses at long range). Only 1 model per unit can use grenades per round. 1 model per unit may toss grenades while charging (p.63), placing D3 STs on the charge target before it fires defensively. The model tossing grenades halves the shots it fires with its primary CQ weapon in the subsequent round of CQ fighting.",
+        "hidden": false,
+        "page": 77,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Guided",
+        "id": "5926-7282-e6d1-49db",
+        "description": "When firing at a painted unit (see Paint ability), attacks gain both the Long Ranged and/or Smart abilities, if desired.",
+        "hidden": false,
+        "page": 77,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Heavy",
+        "id": "ea10-9f8a-7b7f-81f9",
+        "description": "Non-melee weapon: Cannot be fired while on the move. If a unit moves and shoots in the same action, these attacks are wild. Melee weapon: If a heavy melee weapon is a primary CQ weapon, then the model cannot use a secondary CQ weapon. A heavy melee weapon cannot be a secondary CQ weapon.",
+        "hidden": false,
+        "page": 77,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Hit & Run",
+        "id": "4f72-1cd0-ea7e-5032",
+        "description": "Always hit on rolls of (X+) during a hit & run, despite it being wild fire. If range is ‘H&R’, then it may only be used in a hit & run.\nHit & Run shooting: only allowed if a unit is performing a Dash action ánd either passes over or through an enemy unit with a dynamic move or overruns an enemy unit. Replace normal with hit & run shooting: primary target is a unit passed completely over/through, always considered within LoS and short range, considered to hit rear arc and is wild fire. Defensive fire hits front or rear as desired. Any model doing hit & run shooting may throw a grenade (instead of just 1 model). AoE (SPR) is AoE (SB) instead, count as attacks from above if done after dynamic move, target models in a building are not automatically under the template.",
+        "hidden": false,
+        "page": 77,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Ignore Cover",
+        "id": "8016-bd46-6ae9-909c",
+        "description": "These hits cannot be ignored by cover.",
+        "hidden": false,
+        "page": 77,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Ind Fire",
+        "id": "cca6-ac32-37e0-70ef",
+        "description": "Halve firer’s SKL, but unit can fire at targets out of line of sight. Penetration rolls are resolved using rear AV and if all attacks are indirect, they count as hitting the target’s rear arc. Automatically misses at short range. If noted as ‘optional’, the unit can choose to fire indirectly or not.",
+        "hidden": false,
+        "page": 77,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Large Models Only",
+        "id": "23dd-4d1b-6279-5d92",
+        "description": "Primary target must be a large model unit.",
+        "hidden": false,
+        "page": 77,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Limited Use (X)",
+        "id": "3674-1daf-3cdf-5dce",
+        "description": "Can only be used in (X) rounds during the game.",
+        "hidden": false,
+        "page": 77,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Long Ranged (+X\")",
+        "id": "df84-84de-f1f6-e73c",
+        "description": "Add (X) inches to the attack’s range. If no value is listed, double it. Automatically misses at short range.",
+        "hidden": false,
+        "page": 79,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Melee",
+        "id": "ffe3-cd3f-6e3c-762e",
+        "description": "Has the Ignore Cover ability and is a CQ weapon. If SHO is not listed, it is the model’s EVS+MAS+FOR, halved. If PEN is not listed, it is the model’s MAS.",
+        "hidden": false,
+        "page": 79,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Paint (X+)",
+        "id": "6845-47db-7cce-0d30",
+        "description": "When (X+) is rolled to successfully hit, then after that round of shooting, the target is painted for the rest of the turn. Painted units have -1 cover value, or -2 if painted from their rear arc. Wild fire cannot paint its target. This ability is cumulative, but only to a max of -2.",
+        "hidden": false,
+        "page": 79,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Pistol",
+        "id": "865a-54f5-5fc3-4045",
+        "description": "CQ weapon. Has the Short Ranged ability (Double the shots fired at short range. Automatically misses at long range.) 2 pistols can be fired together as linked weapons, but not during CQ fighting.",
+        "hidden": false,
+        "page": 79,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Poison (X+)",
+        "id": "87a5-8d32-02ac-861a",
+        "description": "When (X+) is rolled to successfully penetrate, the attack gains +1 DAM against organic models.",
+        "hidden": false,
+        "page": 79,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Precision Kill",
+        "id": "38b9-9cd2-9241-19cd",
+        "description": "During casualty removal, penetrations with this ability are applied first and by the firing player.",
+        "hidden": false,
+        "page": 79,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Short Ranged (+X)",
+        "id": "7465-5653-fa3d-efad",
+        "description": "Add (X) shots at short range. If no value is listed, double the shots fired. Automatically misses at long range.",
+        "hidden": false,
+        "page": 79,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Smart",
+        "id": "d2bf-b8b1-d388-ce84",
+        "description": "Cannot be ignored by the Dodge ability and can target units out of line of sight. Does not apply to short ranged fire.",
+        "hidden": false,
+        "page": 79,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Sniper (X+)",
+        "id": "0024-e935-4640-fa2b",
+        "description": "When rolling (X+) to successfully hit, this attack gains +1 DAM and the Ignore Cover and Precision Kill (during casualty removal, penetrations with this ability are applied first and by the firing player) abilities.",
+        "hidden": false,
+        "page": 79,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Suppress (X)",
+        "id": "b64e-a01b-7e2d-7afe",
+        "description": "A unit hit by this weapon gains (X) additional STs. If noted as ‘psych’, then these are psych STs. Not cumulative, use the value that results in the most STs being placed.",
+        "hidden": false,
+        "page": 80,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Titan Slayer",
+        "id": "71d9-1426-9206-ad2b",
+        "description": "When (X+) is rolled to successfully penetrate, double the attack’s DAM.",
+        "hidden": false,
+        "page": 80,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Bloodthirsty",
+        "id": "535b-c205-3fce-a2b9",
+        "description": "(squad ability) The unit can elect to perform a Charge action instead of a compulsory Dig-in or Shaken action, but it must charge the enemy unit it can reach by the shortest route.",
+        "hidden": false,
+        "page": 81,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Bodyguard (X+)",
+        "id": "0091-5b62-0fe0-078b",
+        "description": "(squad ability) When suffering Precision Kill penetrations, the unit may roll a D6. On (X+), the penetrations are applied to bodyguard models first, unless the attacks are against the unit's rear arc.",
+        "hidden": false,
+        "page": 81,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Command (X)",
+        "id": "1e85-f4b0-4df8-a867",
+        "description": "Generates (X) command points a turn. These can be allocated to command models, not exceeding their WP. Command models can then issue an order to a unit within 18\" when that unit is activated, removing STs from the unit equal to the command points expended. A model cannot issue more orders per turn than its command value.",
+        "hidden": false,
+        "page": 81,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Dodge (X)",
+        "id": "251f-12c7-a93f-c8ce",
+        "description": "(exclusive ability) Ignore (X) hits each round of shooting. Cannot be used when pinned or the same round that cover or another ability ignores hits.",
+        "hidden": false,
+        "page": 82,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Dug-in (+X)",
+        "id": "cdb1-483b-1b18-e7d3",
+        "description": "(squad ability) The unit gains an additional bonus to their cover value while pinned, with (X) being the modifier.",
+        "hidden": false,
+        "page": 82,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Dynamic Move",
+        "id": "649e-9049-2d6f-064e",
+        "description": "(exclusive ability) Model can move dynamically. This is special movement with these rules:\n·         may utilize open ground bonus movement when taking cover;\n·         may pass through intervening models and terrain;\n·         can move onto and off of vertical terrain without counting any vertical distance;\n·         If any model ends a dynamic move touching an obstacle or even partially within area terrain, the unit gains an additional D3 STs upon completing the move.",
+        "hidden": false,
+        "page": 82,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Fearless",
+        "id": "7125-d09a-adf9-88e9",
+        "description": "(only applies if squad leader is fearless) The unit ignores psych STs, is never shell-shocked, pinned, or required to retreat or flee the battle. It does not take suppressive fire discipline checks or CQ discipline checks. When performing a Shaken action, the unit must either make a single move or remain stationary and fire a single round of wild shooting. Upon completing a Dig-in or Shaken action, shake-off the extra D3 STs as though it were pinned.",
+        "hidden": false,
+        "page": 82,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Fearsome (X)",
+        "id": "c8f9-d617-f139-4af0",
+        "description": "(squad ability) Enemy units within 12” count as having (X) additional Psych STs while within that range. Not cumulative.",
+        "hidden": false,
+        "page": 82,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Field (X)",
+        "id": "86f2-9202-b7be-c3bf",
+        "description": "(squad ability) Ignore (X) hits each round of shooting. Cannot be used the same round that cover or another ability ignores hits.",
+        "hidden": false,
+        "page": 82,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Heavy Gunner",
+        "id": "f7dc-4d79-9ed4-645f",
+        "description": "Ignore the Heavy ability, except when CQ fighting.",
+        "hidden": false,
+        "page": 82,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Kill Mission",
+        "id": "55b9-5903-6564-b59f",
+        "description": "(squad ability) This unit cannot control mission objective markers, but can still contest them.",
+        "hidden": false,
+        "page": 82,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Marksman (+X)",
+        "id": "bbbb-6de3-aaf5-ace2",
+        "description": "Add (X) to the model's SKL when shooting, except in CQ fighting. If no value is listed, double the model’s SKL.",
+        "hidden": false,
+        "page": 82,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Massive Strength",
+        "id": "b312-6dd0-b331-1774",
+        "description": "If a model’s primary CQ weapon is a melee weapon: add +1 DAM, and its PEN value is double the model’s MAS. Ignore the Heavy ability during CQ fighting.",
+        "hidden": false,
+        "page": 83,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Overrun",
+        "id": "dddf-75d0-00dd-9560",
+        "description": "Can move through (overrun) standard-sized enemy units. Enemy units can fire defensively at a unit that overruns them (see p.69).",
+        "hidden": false,
+        "page": 83,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Scout",
+        "id": "d91e-c086-b99c-1e28",
+        "description": "(squad ability) May deploy in no-man’s land, but entirely in the owning player's table half. It may make a flanking maneuver when held in reserve.",
+        "hidden": false,
+        "page": 83,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Stoic",
+        "id": "6392-ad47-fcb9-6f2b",
+        "description": "(squad ability) Instead of performing a Shaken action, the unit performs a Dig-in action, unless it has STs equal to at least double its discipline. Shell-shocked stoic units do not automatically fail discipline checks, but instead only pass them on a roll of 6+.",
+        "hidden": false,
+        "page": 83,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Teleport",
+        "id": "1613-6261-049a-8dbb",
+        "description": "(exclusive ability) When performing a Dash action, the unit can make an unlimited range dynamic move, but cannot end within 6” of the enemy or be on the move. If ending a teleport touching an obstacle or area terrain, it gains +2D3 STs. If a range is listed, this is the max distance of the teleport. A unit cannot teleport in consecutive turns.",
+        "hidden": false,
+        "page": 83,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Vert Climb (X\")",
+        "id": "9be7-0434-b8ba-f98e",
+        "description": "(squad ability) Ignore (X) inches of vertical movement the unit would normally count each move.",
+        "hidden": false,
+        "page": 83,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Bodyguard (3+)",
+        "id": "af3f-72e9-209d-da00",
+        "description": "(squad ability) When suffering Precision Kill penetrations, the unit may roll a D6. On 3+, the penetrations are applied to bodyguard models first, unless the attacks are against the unit's rear arc.",
+        "hidden": false,
+        "page": 81,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Bodyguard (4+)",
+        "id": "9a85-5ba2-85b5-12c9",
+        "description": "(squad ability) When suffering Precision Kill penetrations, the unit may roll a D6. On 4+, the penetrations are applied to bodyguard models first, unless the attacks are against the unit's rear arc.",
+        "hidden": false,
+        "page": 81,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Command (0)",
+        "id": "d82b-528e-b6bb-5185",
+        "description": "Does not generate command points. Can be allocated command points up to WP. May issue 1 order to their own unit when that unit is activated, removing STs from the unit equal to the command points expended.",
+        "hidden": false,
+        "page": 81,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Command (1)",
+        "id": "468e-1252-5c54-2da5",
+        "description": "Generates 1 command point a turn. These can be allocated to command models, not exceeding their WP. Command models can then issue an order to a unit within 18\" when that unit is activated, removing STs from the unit equal to the command points expended. A model cannot issue more orders per turn than its command value.",
+        "hidden": false,
+        "page": 81,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Command (2)",
+        "id": "c57c-c41c-02b2-4195",
+        "description": "Generates 2 command points a turn. These can be allocated to command models, not exceeding their WP. Command models can then issue an order to a unit within 18\" when that unit is activated, removing STs from the unit equal to the command points expended. A model cannot issue more orders per turn than its command value.",
+        "hidden": false,
+        "page": 81,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Dodge (1) [if 'Mobile unit']",
+        "id": "6e41-25eb-d2f9-d0bb",
+        "description": "(exclusive ability) Ignore 1 hit each round of shooting. Cannot be used when pinned or the same round that cover or another ability ignores hits.",
+        "hidden": false,
+        "page": 82,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Dug-in (+1)",
+        "id": "836f-d5ac-3a4d-d74b",
+        "description": "(squad ability) The unit gains an additional +1 bonus to their cover value while pinned.",
+        "hidden": false,
+        "page": 82,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Fearsome (1)",
+        "id": "f7ca-2cd9-e88c-273b",
+        "description": "(squad ability) Enemy units within 12” count as having 1 additional Psych ST while within that range. Not cumulative.",
+        "hidden": false,
+        "page": 82,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Fearsome (2)",
+        "id": "4152-44aa-fb45-18ea",
+        "description": "(squad ability) Enemy units within 12” count as having 2 additional Psych STs while within that range. Not cumulative.",
+        "hidden": false,
+        "page": 82,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Field (1)",
+        "id": "ce45-943c-e7fd-482c",
+        "description": "(squad ability) Ignore 1 hit each round of shooting. Cannot be used the same round that cover or another ability ignores hits.",
+        "hidden": false,
+        "page": 82,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Vert Climb (2\")",
+        "id": "685f-9e04-e624-6a8e",
+        "description": "(squad ability) Ignore 2 inches of vertical movement the unit would normally count each move.",
+        "hidden": false,
+        "page": 83,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Vehicle (model type)",
+        "id": "8ea9-adae-30d6-4de6",
+        "description": "Vehicles have the following abilities:\n·         Overrun (exclusive): Can move through (overrun) standard-sized enemy units. Enemy units can fire defensively at a unit that overruns them at their choice of AV.\n·         Fearless (squad): The unit ignores psych STs, is never shell-shocked, pinned, or required to retreat or flee the battle. It does not take suppressive fire discipline checks or CQ discipline checks. When performing a Shaken action, the unit must either make a single move or remain stationary and fire a single round of wild shooting. Upon completing a Dig-in or Shaken action, shake-off the extra D3 STs as though it were pinned. Does not apply if squad leader is not fearless.\n·         Heavy Gunner: Ignore the Heavy ability, except when CQ fighting.\n·         Kill Mission: This unit cannot control mission objective markers, but can still contest them.\n\nAs large models, they follow these rules:\n·         Directional movement: Non-fixed and non-dynamic movement can only be forward or reverse. A number of pivots up to 90° is allowed, limited to half the model’s EVS. Moving in reverse, MV is halved and only 1 pivot is allowed. End-of-move pivot for required facing is always allowed.\n·         Large models and terrain:\n\to    Large models are never in cover;\n\to    Standard-sized models never count as partially obscuring a large model;\n\to    Terrain features only partially obscure a large model if they obscure at least 50% of its body;\n\to    Large models only count as being partially obscured for being within an area terrain feature if their entire base is within it and it’s not low area terrain.\n·         Large model shooting: Large models can fire a number of weapons up to their FOR characteristic (see p. 65 for multiple weapons in CQ).\n·         Explode: When a large model becomes a casualty, it explodes on a 5+. This causes a special attack emanating from the base of the model using the model’s MAS vs. the targets’ EVS. Explosion profile: RNG=1/2MAS+D3\" SHO=MASx2 PEN=MAS DAM=1.\n\nAlso:\n1) Vehicles treat area terrain and obstacles they move into, out of and over as dangerous ground. Vehicles cannot ascend or descend vertical terrain at all, though they can traverse gentle slopes up or down a hill.\n2) A Vehicle’s body is considered to be any part of the model except for gun barrels, antennae and any purely decorative items that are inconsequential towards the operation of the vehicle, such as banners, chains, etc. As always, any element considered not to be part of the model’s body is ignored while drawing line of sight. Unlike other models’ bodies, a vehicle’s body can completely obscure line of sight exactly like a terrain obstacle. However, vehicles that are part of the unit checking line of sight, as well as vehicles in a unit being spotted, are still ignored.\n3) Vehicles cannot perform a Charge action, and cannot perform reactive CQ fighting.",
+        "hidden": false,
+        "page": "69-73",
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Teleport (24\")",
+        "id": "2455-1ad7-f12b-006f",
+        "description": "(exclusive ability) When performing a Dash action, the unit can make a 24\" dynamic move, but cannot end within 6” of the enemy or be on the move. If ending a teleport touching an obstacle or area terrain, it gains +2D3 STs. A unit cannot teleport in consecutive turns.",
+        "hidden": false,
+        "page": 83,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Dodge (1)",
+        "id": "1e0b-66fb-5589-9efe",
+        "description": "(exclusive ability) Ignore 1 hit each round of shooting. Cannot be used when pinned or the same round that cover or another ability ignores hits.",
+        "hidden": false,
+        "page": 82,
+        "publicationId": "49cd-4f53-pubd1e201"
+      },
+      {
+        "name": "Xeno",
+        "id": "64df-0542-eb45-1db2",
+        "description": "Xenos are organic models (for attacks, abilities, etc., that specify they affect organic models). Xeno behemoths do not explode when they are destroyed.",
+        "hidden": false
+      },
+      {
+        "name": "Medic (D3)",
+        "id": "f8c9-b5a0-be15-9a50",
+        "description": "(squad ability) When this unit completes an Advance & Fire or Dash action, it may select one friendly unit within 6” (including itself) that contains at least half organic models. The selected unit immediately removes (D3) STs.",
+        "hidden": false
+      },
+      {
+        "name": "Aerial Insertion",
+        "id": "f6f1-8217-d3b5-a1cb",
+        "description": "(exclusive ability) When performing a Dash action from reserve, this unit can make an unlimited range dynamic move, but cannot end within 6” of the enemy or be on the move. If ending this dynamic move touching an obstacle or area terrain, it gains +2D3 STs. When returning to the game as a reinforcement, this unit may only utilize aerial insertion if you expend 1 command point (from your command point pool).",
+        "hidden": false
+      },
+      {"name": "Phase", "id": "9016-a51f-2565-b49d", "description": "Cannot be ignored by a Field.", "hidden": false}
+    ]
+  }
+}
